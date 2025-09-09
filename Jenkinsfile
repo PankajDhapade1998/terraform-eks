@@ -10,6 +10,13 @@ pipeline {
     }
 
     stages {
+
+        stage('Clean Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
+        
         stage('Checkout') {
             steps {
                 git 'https://github.com/PankajDhapade1998/terraform-eks'
