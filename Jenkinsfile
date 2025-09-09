@@ -10,19 +10,7 @@ pipeline {
     }
 
     stages {
-
-        stage('Clean Workspace') {
-            steps {
-                cleanWs()
-            }
-        }
         
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/PankajDhapade1998/terraform-eks'
-            }
-        }
-    
         stage ("terraform init") {
             steps {
                 sh ("terraform init -reconfigure") 
