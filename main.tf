@@ -33,7 +33,7 @@ resource "aws_eks_node_group" "node-grp" {
   ]
   capacity_type   = "ON_DEMAND"
   disk_size       = 20
-  instance_types  = ["t2.micro"]
+  instance_types  = ["t2.medium"]
   labels          = { env = "dev" }
 
   scaling_config {
